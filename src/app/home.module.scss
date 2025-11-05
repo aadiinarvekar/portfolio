@@ -1,0 +1,8 @@
+.avatarContainer {
+  @media (max-width: 768px) and (orientation: portrait) {
+    .avatar {
+      width: 180px !important;
+      height: 180px !important;
+    }
+  }
+}

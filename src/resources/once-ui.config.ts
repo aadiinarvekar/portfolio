@@ -18,15 +18,15 @@ const baseURL: string = "https://demo.magic-portfolio.com";
 
 const routes: RoutesConfig = {
   "/": true,
-  "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/about": false,
+  "/work": false,
+  "/blog": false,
+  "/gallery": false,
 };
 
 const display: DisplayConfig = {
   location: true,
-  time: true,
+  time: false,
   themeSwitcher: true,
 };
 
@@ -187,17 +187,17 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Person",
+  name: "Aditya Narvekar",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "aadiinarvekar@gmail.com",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  threads: "",
+  linkedin: "https://www.linkedin.com/in/adityanarvekar2002/",
+  discord: "",
 };
 
 // social sharing configuration for blog posts

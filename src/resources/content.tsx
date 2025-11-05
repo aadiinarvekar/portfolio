@@ -1,19 +1,20 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Home, Newsletter, Person, Social } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Aditya",
+  lastName: "Narvekar",
+  name: `Aditya Narvekar`,
+  role: "CA Finalist",
+  avatar: "/images/avatar.png",
+  email: "aadiinarvekar@gmail.com",
+  phone: "+91 8329294330",
+  location: "Mumbai, Maharashtra",
+  languages: ["English", "Hindi", "Marathi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -22,19 +23,14 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/adityanarvekar2002/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Phone",
+    icon: "phone",
+    link: `tel:${person.phone}`,
   },
   {
     name: "Email",
@@ -47,34 +43,15 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `${person.name} – ${person.role}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  headline: <>Aspiring Chartered Accountant | CA Finalist</>,
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    display: false,
+    title: <></>,
+    href: "/",
   },
-  subline: (
-    <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+  subline: <></>,
 };
 
 const about: About = {
@@ -90,7 +67,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -98,52 +75,46 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Aspiring Chartered Accountant with a strong academic base and a growing interest in M&A Advisory, 
+        Transaction Taxation, Financial Due Diligence, and Private Equity. Developing skills in financial 
+        analysis and business understanding, with a disciplined, detail-focused approach and a willingness 
+        to learn and take responsibility.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Skills",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "ICAI Training",
+        timeframe: "",
+        role: "",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Completed the mandatory 90-hour Information Technology Training (ITT) and Orientation Course by ICAI. Gained foundational knowledge in IT applications for accounting, professional ethics, and basic skills required for the CA profession.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Accounting Knowledge",
+        timeframe: "",
+        role: "",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developing knowledge in Indian taxation including Income Tax Act and GST regulations. Learning Auditing Standards and accounting principles through CA curriculum. Building understanding of financial reporting, tax compliance, and audit procedures.
           </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Professional Skills",
+        timeframe: "",
+        role: "",
+        achievements: [
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Good communication skills with ability to work effectively in team settings. Eager to learn and adapt to new challenges. Reliable and detail-oriented with a willingness to take on responsibilities and contribute to team objectives.
           </>,
         ],
         images: [],
@@ -152,149 +123,108 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "CA Intermediate G2",
+        description: (
+          <>
+            May 2024
+            <br />
+            Institute of Chartered Accountants of India
+            <br />
+            Scored - 161/300
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "CA Intermediate G1",
+        description: (
+          <>
+            Sept 2025
+            <br />
+            Institute of Chartered Accountants of India
+            <br />
+            Scored - 150/300
+          </>
+        ),
+      },
+      {
+        name: "CA Foundation",
+        description: (
+          <>
+            Nov 2021
+            <br />
+            Institute of Chartered Accountants of India
+            <br />
+            Scored - 259/400
+          </>
+        ),
+      },
+      {
+        name: "B.Com (TY)",
+        description: (
+          <>
+            Gogate Joglekar College, Ratnagiri
+          </>
+        ),
+      },
+      {
+        name: "HSC",
+        description: (
+          <>
+            2020
+            <br />
+            DBJ College, Chiplun
+            <br />
+            Scored - 89.90%
+          </>
+        ),
+      },
+      {
+        name: "SSC",
+        description: (
+          <>
+            2018
+            <br />
+            Dalwai Highschool, Mirjoli
+            <br />
+            Scored - 94.90%
+          </>
+        ),
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "MS Excel",
+        description: <>Comfortable working with spreadsheets, basic formulas, and data organization. Learning to use Excel for accounting tasks, creating simple reports, and analyzing financial data.</>,
+        tags: [],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+        title: "MS PowerPoint",
+        description: <>Able to create basic presentations with clear formatting and simple data visualization. Learning to design professional slides for reports and presentations.</>,
+        tags: [],
+        images: [],
+      },
+      {
+        title: "MS Word",
+        description: <>Comfortable creating and formatting professional documents, reports, and basic documentation. Familiar with document formatting and templates for business use.</>,
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Web Development",
+        description: <>Learning modern web technologies including HTML, CSS, JavaScript, and frameworks like React and Next.js. Developing skills to build basic websites and web applications.</>,
+        tags: [],
+        images: [],
+      },
     ],
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
-
-const work: Work = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
-};
-
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about };
